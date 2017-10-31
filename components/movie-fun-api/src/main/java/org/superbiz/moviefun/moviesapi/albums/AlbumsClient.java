@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.moviesapi;
+package org.superbiz.moviefun.moviesapi.albums;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;

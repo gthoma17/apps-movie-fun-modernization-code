@@ -2,6 +2,12 @@ package org.superbiz.moviefun.moviesapi;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.superbiz.moviefun.moviesapi.albums.AlbumFixtures;
+import org.superbiz.moviefun.moviesapi.albums.AlbumInfo;
+import org.superbiz.moviefun.moviesapi.albums.AlbumsClient;
+import org.superbiz.moviefun.moviesapi.movies.MovieFixtures;
+import org.superbiz.moviefun.moviesapi.movies.MovieInfo;
+import org.superbiz.moviefun.moviesapi.movies.MoviesClient;
 
 import java.util.Map;
 

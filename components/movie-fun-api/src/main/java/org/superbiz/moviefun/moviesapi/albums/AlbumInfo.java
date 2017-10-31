@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.moviesapi;
+package org.superbiz.moviefun.moviesapi.albums;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
