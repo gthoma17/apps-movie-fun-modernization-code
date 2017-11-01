@@ -26,9 +26,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * @version $Revision$ $Date$
- */
 @Component
 public class MovieServlet extends HttpServlet {
 

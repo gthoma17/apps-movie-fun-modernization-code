@@ -2,7 +2,6 @@ server.port: 8081
 
 spring:
   jpa:
-    generate-ddl: true
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
 
   datasource:
@@ -12,3 +11,8 @@ spring:
 logging.level:
   root: WARN
   org.superbiz.moviefun: DEBUG
+
+s3:
+  accessKey: <access key id>
+  secretKey: <secret access key>
+  bucketName: <name of the bucket>
