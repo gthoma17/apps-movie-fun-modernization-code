@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.moviesapi.movies;
+package org.superbiz.moviefun.moviesapi;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
@@ -13,9 +13,13 @@ import static org.springframework.http.HttpMethod.GET;
 
 @Component
 public class MoviesClient {
-    @Value("${movies.url}")
     private String moviesUrl;
-    private RestOperations restOperations = new RestTemplate();
+    private RestOperations restOperations;
+
+    public MoviesClient(String moviesUrl, RestOperations restOperations){
+        this.moviesUrl = moviesUrl;
+        this.restOperations = restOperations;
+    }
 
     private static ParameterizedTypeReference<List<MovieInfo>> movieListType = new ParameterizedTypeReference<List<MovieInfo>>() {
     };
@@ -49,7 +53,6 @@ public class MoviesClient {
     }
 
     public int countAll() {
-        System.out.println(moviesUrl + "/count");
         return restOperations.getForObject(moviesUrl + "/count", Integer.class);
     }
 

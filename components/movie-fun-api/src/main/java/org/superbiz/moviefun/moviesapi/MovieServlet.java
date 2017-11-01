@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.superbiz.moviefun.moviesapi.movies;
+package org.superbiz.moviefun.moviesapi;
 
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -133,7 +133,6 @@ public class MovieServlet extends HttpServlet {
             request.setAttribute("key", key);
             request.setAttribute("field", field);
         }
-        System.out.println(request.getServletContext().getServletContextName());
         request.getRequestDispatcher("WEB-INF/moviefun.jsp").forward(request, response);
     }
 

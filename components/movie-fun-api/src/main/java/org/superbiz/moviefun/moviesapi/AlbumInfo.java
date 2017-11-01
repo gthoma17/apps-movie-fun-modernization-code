@@ -1,12 +1,6 @@
-package org.superbiz.moviefun.moviesapi.albums;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package org.superbiz.moviefun.moviesapi;
 
 public class AlbumInfo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String artist;

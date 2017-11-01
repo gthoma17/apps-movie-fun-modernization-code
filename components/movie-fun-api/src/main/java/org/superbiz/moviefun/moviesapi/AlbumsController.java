@@ -1,4 +1,4 @@
-package org.superbiz.moviefun.moviesapi.albums;
+package org.superbiz.moviefun.moviesapi;
 
 import org.apache.tika.io.IOUtils;
 import org.slf4j.Logger;

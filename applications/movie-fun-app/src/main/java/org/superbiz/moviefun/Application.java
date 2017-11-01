@@ -8,11 +8,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.superbiz.moviefun.blobstore.BlobStore;
 import org.superbiz.moviefun.blobstore.S3Store;
-import org.superbiz.moviefun.moviesapi.movies.MovieServlet;
+import org.superbiz.moviefun.moviesapi.MovieServlet;
 
 @SpringBootApplication
+@ComponentScan
 public class Application {
 
     public static void main(String... args) {

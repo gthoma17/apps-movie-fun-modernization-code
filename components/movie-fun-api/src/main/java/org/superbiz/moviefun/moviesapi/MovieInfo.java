@@ -1,12 +1,6 @@
-package org.superbiz.moviefun.moviesapi.movies;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package org.superbiz.moviefun.moviesapi;
 
 public class MovieInfo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String director;
     private String title;

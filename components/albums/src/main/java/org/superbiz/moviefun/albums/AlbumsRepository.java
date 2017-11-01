@@ -31,7 +31,8 @@ public class AlbumsRepository {
 
     @Transactional
     public void addAlbum(Album album) {
-        entityManager.persist(album);
+        Album albumToSave = new Album(album.getArtist(), album.getTitle(), album.getYear(), album.getRating());
+        entityManager.persist(albumToSave);
     }
 
     public Album find(long id) {
