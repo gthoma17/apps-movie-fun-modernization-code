@@ -1,4 +1,4 @@
-/**
+package org.superbiz.moviefun.albums; /**
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.superbiz.moviefun.albums;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,14 +24,15 @@ import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
 @Repository
-public class AlbumsBean {
+public class AlbumsRepository {
 
     @PersistenceContext
     private EntityManager entityManager;
 
     @Transactional
     public void addAlbum(Album album) {
-        entityManager.persist(album);
+        Album albumToSave = new Album(album.getArtist(), album.getTitle(), album.getYear(), album.getRating());
+        entityManager.persist(albumToSave);
     }
 
     public Album find(long id) {
